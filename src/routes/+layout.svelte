@@ -4,7 +4,7 @@
 	let { children } = $props();
 </script>
 
-<div class="bg-[url(background.jpg)] bg-fixed">
+<div class="bg-[url(/background.jpg)] bg-fixed">
 	<NavBar />
 	{@render children()}
 </div>

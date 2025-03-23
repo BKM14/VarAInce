@@ -11,7 +11,7 @@
 
 <Navbar class="bg-transparent">
 	<NavBrand href="/">
-		<img src="favicon.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
+		<img src="/favicon.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
 		<span class="self-center text-4xl font-semibold whitespace-nowrap text-white">VarAInce</span>
 	</NavBrand>
 	<NavHamburger />
