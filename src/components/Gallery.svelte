@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Avatar, Gallery } from "flowbite-svelte";
-
+    
     const images1 = [
     { alt: 'erbology', src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg' },
     { alt: 'shoes', src: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg' },
@@ -28,6 +28,7 @@
 </script>
 
 <div class="w-3/5 mx-auto p-10">
+  <div>
     <h2 class="text-white font-bold text-6xl text-center m-10">{galleryTitle}</h2>
     {#if eventPhotos}
     <Gallery class="gap-4 grid-cols-2 md:grid-cols-4" items={[]}>
@@ -60,4 +61,5 @@
         </Gallery>
       </Gallery>
     {/if}
+  </div>
 </div>
