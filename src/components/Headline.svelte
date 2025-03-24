@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount, tick } from "svelte";
 	import { fade } from "svelte/transition";
 
     let visible = false;
@@ -7,14 +7,19 @@
 
     onMount(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => (visible = entry.isIntersecting),
+            async ([entry]) => {
+                await tick();
+                (visible = entry.isIntersecting)
+            },
             {threshold: 0.30}
         )
-        observer.observe(element!);
+        if (element) observer.observe(element!);
+
+        return () => observer.disconnect();
     });
 </script>
 
-<div class=" flex flex-col w-full md:w-2/3 px-4 md:px-6 min-h-screen text-orange-600" bind:this={element}>
+<div class="  flex justify-end  w-full md:w-2/3 px-4 md:px-6 min-h-screen text-orange-600" bind:this={element}>
     {#if visible}
     <div transition:fade={{duration: 300}}>
         <h2 class="text-center text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 lg:mb-8">

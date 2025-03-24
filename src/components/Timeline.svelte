@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Modal, Timeline, TimelineItem } from 'flowbite-svelte';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { blur } from 'svelte/transition';
     let element: HTMLElement | null = null;
     let visible = false;
@@ -9,10 +9,15 @@
 
     onMount(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => (visible = entry.isIntersecting),
+            async ([entry]) => {
+                await tick();
+                (visible = entry.isIntersecting)
+            },
             {threshold: 0.30}
         );
         observer.observe(element!);
+
+        return () => observer.disconnect();
     });
 
     interface Event {
