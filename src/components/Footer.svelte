@@ -1,4 +1,4 @@
-<footer class="relative py-2 w-full z-50 bg-[url(/bricks.jpg)] opac">
+<footer class="relative py-2 w-full z-50 bg-[url(/bricks.jpg)]">
     <div class="px-4 flex flex-col sm:flex-row w-full justify-between items-center">
         <div class="flex-col justify-center items-center w-full sm:w-[50%]">
             <div class="px-6 flex items-center justify-center sm:justify-start overflow-hidden xs:justify-center">

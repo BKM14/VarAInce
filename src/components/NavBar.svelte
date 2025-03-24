@@ -1,17 +1,15 @@
 <script>
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
-	import { onMount } from 'svelte';
 	const links = [
-		{ href: '/', label: 'Download the App!' },
-		{ href: '/about', label: 'Timeline!' },
-		{ href: '/docs/components/navbar', label: 'Headline' },
-		{ href: '/pricing', label: 'FAQ' }
+		{ href: '#section1', label: 'About Us!' },
+		{ href: '#section2', label: 'Timeline' },
+		{ href: '#section3', label: 'Meet the Team' }
 	];
 </script>
 
 <Navbar class="bg-transparent">
 	<NavBrand href="/">
-		<img src="/favicon.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
+		<img src="/varaince_ai.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
 		<span class="self-center text-4xl font-semibold whitespace-nowrap text-white">VarAInce</span>
 	</NavBrand>
 	<NavHamburger />
