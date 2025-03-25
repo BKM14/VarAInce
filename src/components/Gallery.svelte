@@ -24,38 +24,37 @@
 
   export let eventPhotos: Boolean = false;
   export let galleryTitle: String = "";
-  export let leftTile: Boolean = false;
 </script>
 
-<div class="w-3/5 mx-auto p-10">
+<div class="md:w-3/5 mx-auto p-10">
   <div>
-    <h2 class="text-white font-bold text-6xl text-center m-10">{galleryTitle}</h2>
+    <h2 class="text-white text-4xl font-bold md:text-6xl text-center md:m-10 m-4">{galleryTitle}</h2>
     {#if eventPhotos}
-    <Gallery class="gap-4 grid-cols-2 md:grid-cols-4" items={[]}>
+    <Gallery class="gap-4 grid-cols-3 md:grid-cols-4" items={[]}>
         <Gallery items={images1} />
         <Gallery items={images2} />
         <Gallery items={images3} />
         <Gallery items={images4} />
       </Gallery>
       {:else}
-      <Gallery class={`gap-4 grid-cols-2 md:grid-cols-4 ${leftTile ? "border-r-4" : ""}`} items={[]}>
+      <Gallery class={`gap-4 grid-cols-3 md:grid-cols-4`} items={[]}>
         <Gallery items={images1} let:item>
-            <Avatar src={item.src} alt={item.alt} class="w-48 h-38"/>
+            <Avatar src={item.src} alt={item.alt} class="w-23 h-18 lg:w-48 lg:h-38"/>
             <div class="text-white font-bold text-center">Name</div>
             <div class="text-white font-light text-center">Post</div>
         </Gallery>
         <Gallery items={images2} let:item>
-            <Avatar src={item.src} alt={item.alt} class="w-48 h-38"/>
+            <Avatar src={item.src} alt={item.alt} class="w-23 h-18 lg:w-48 lg:h-38"/>
             <div class="text-white font-bold text-center">Name</div>
             <div class="text-white font-light text-center">Post</div>
         </Gallery>
         <Gallery items={images3} let:item>
-            <Avatar src={item.src} alt={item.alt} class="w-48 h-38"/>
+            <Avatar src={item.src} alt={item.alt} class="w-23 h-18 lg:w-48 lg:h-38"/>
             <div class="text-white font-bold text-center">Name</div>
             <div class="text-white font-light text-center">Post</div>
         </Gallery>
         <Gallery items={images4} let:item>
-            <Avatar src={item.src} alt={item.alt} class="w-48 h-38"/>
+            <Avatar src={item.src} alt={item.alt} class="w-23 h-18 lg:w-48 lg:h-38"/>
             <div class="text-white font-bold text-center">Name</div>
             <div class="text-white font-light text-center">Post</div>
         </Gallery>

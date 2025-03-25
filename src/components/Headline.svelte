@@ -1,27 +1,26 @@
 <script lang="ts">
-	import { onMount, tick } from "svelte";
-	import { fade } from "svelte/transition";
+	import { onMount } from "svelte";
 
-    let visible = false;
-    let element: HTMLElement | null = null
+	let visible = false;
+	let element: HTMLElement | null = null;
 
-    onMount(() => {
-        const observer = new IntersectionObserver(
-            async ([entry]) => {
-                await tick();
-                (visible = entry.isIntersecting)
-            },
-            {threshold: 0.30}
-        )
-        if (element) observer.observe(element!);
+	function handleIntersection(entries: IntersectionObserverEntry[]) {
+		for (const entry of entries) {
+			visible = entry.isIntersecting;
+		}
+	}
 
-        return () => observer.disconnect();
-    });
+	onMount(() => {
+		const observer = new IntersectionObserver(handleIntersection, { threshold: 0.3 });
+		if (element) observer.observe(element);
+
+		return () => observer.disconnect();
+	});
 </script>
 
-<div class="  flex justify-end  w-full md:w-2/3 px-4 md:px-6 min-h-screen text-orange-600" bind:this={element}>
-    {#if visible}
-    <div transition:fade={{duration: 300}}>
+
+<div class="flex justify-end w-full md:w-2/3 px-4 md:px-6 text-orange-600" bind:this={element}>
+    <div class="{visible ? 'fade-visible' : 'fade-hidden'}">
         <h2 class="text-center text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 lg:mb-8">
             About Cryptic Hunt 3.0 - VIT's Largest Scavenger Hunt!
         </h2>
@@ -35,5 +34,4 @@
             Ready to test your wits and embark on an adventure? Download the app and be a part of the action!
         </p>
     </div>
-    {/if}
 </div>
