@@ -5,6 +5,7 @@
 	import NavBar from '../components/NavBar.svelte';
 	import Gallery from '../components/Gallery.svelte';
 	import { onMount } from 'svelte';
+	import Sponsors from '../components/Sponsors.svelte';
     
     let visible = false;
     let element: HTMLElement | null = null;
@@ -49,7 +50,8 @@
             <img src="/Rookie.png" alt="Avatar">
         </div>
         <Headline />
-    </div>    
+    </div>
+    <Sponsors />
     <div id="section2" class="flex justify-center items-center my-20">
         <Timeline/>
     </div>
