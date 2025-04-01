@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Modal, Timeline, TimelineItem } from 'flowbite-svelte';
+	import { Modal, Timeline, TimelineItem, Button } from 'flowbite-svelte';
 	import { onMount } from 'svelte';
     let element: HTMLElement | null = null;
     let visible = false;
@@ -90,16 +90,10 @@
         <h3 class="text-xl font-bold text-gray-900 dark:text-white">{selectedEvent.title}</h3>
         <p class="mt-2 text-gray-700 dark:text-gray-300">{selectedEvent.description}</p>
         <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{selectedEvent.date}</p>
-        <div class="relative w-full mx-auto bg-slate-100 rounded-sm" style="padding-top: 150%;">
-            <iframe
-              class="absolute top-0 left-0 w-full h-full border-0"
-              title="Register Here"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfIJFjekV1729WLJy0lyF17dA2DIpsg5oJR4uW8F1XJR22S0w/viewform?embedded=true">
-            </iframe>
-          </div>
+        <Button color="green" class="mt-4 w-full"> 
+            <a href={selectedEvent.googleFormsLink} target="_blank">Register Here</a>
+        </Button>
       {/if}
-      <button on:click={() => (showModal = false)} class="mt-4 w-full bg-blue-500 text-white p-2 rounded">
-        Close
-      </button>
+
     </div>
   </Modal>
