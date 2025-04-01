@@ -14,7 +14,7 @@
     function handleScroll() {
         if (element) {
             const rect = element.getBoundingClientRect();
-            visible = rect.top < window.innerHeight * 0.85 && rect.bottom > 0;
+            visible = rect.top < window.innerHeight * 0.65 && rect.bottom > 0;
         }
         if (galleryElement) {
             const rect = galleryElement.getBoundingClientRect();
@@ -37,12 +37,12 @@
 <div class="md:min-h-screen flex flex-col justify-center items-center w-full">
     <div class="flex flex-col items-center justify-center">
         <NavBar />
-        <img src="/VARAINCEWEEK.svg" alt="">
+        <img src="/VARAINCEWEEK.svg" alt="" class="box bounce-1 ">
     </div>
     
 	<div bind:this={element} class="max-w-screen relative flex items-center justify-center overflow-hidden p-10" id="section1">
         <div 
-            class="-rotate-25 absolute top-0 right-0 -mr-35 w-1/4"
+            class="-rotate-25 absolute top-0 right-0 -mr-35 w-1/4 hidden lg:block"
             class:image-hidden={!visible}
             class:image-visible={visible}
         >
@@ -56,13 +56,13 @@
     <div class="text-7xl text-white font-bold mt-14 text-center">The Team</div>
     <div 
         id="section3" 
-        class="w-8/10 flex max-w-screen overflow-hidden flex-col md:flex-row"
+        class="w-full flex max-w-screen overflow-hidden flex-col md:flex-row"
         bind:this={galleryElement}
         class:image-hidden={!galleryVisible}
         class:image-visible={galleryVisible}
     >
-        <Gallery eventPhotos={false} galleryTitle="Senior Core Team" />
-        <Gallery eventPhotos={false} galleryTitle="Junior Core Team" />
+        <Gallery galleryTitle="Senior Core Team" />
+        <Gallery galleryTitle="Junior Core Team" />
     </div>
     <div class="w-full">
         <Footer />

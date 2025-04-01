@@ -21,17 +21,20 @@
 
 <div class="flex justify-end w-full md:w-2/3 px-4 md:px-6 text-orange-600" bind:this={element}>
     <div class="{visible ? 'fade-visible' : 'fade-hidden'}">
-        <h2 class="text-center text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 lg:mb-8">
-            About Cryptic Hunt 3.0 - VIT's Largest Scavenger Hunt!
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 lg:mb-8">
+            About VarAInce Week
         </h2>
-        <p class="text-base md:text-lg lg:text-2xl text-center md:text-left mb-8">
-            Cryptic Hunt 3.0, is a thrilling campus-wide scavenger hunt like no other! This event challenges participants to solve cryptic riddles, uncover hidden clues, and scan QR codes scattered throughout the VIT campus. With the help of our dedicated app, you'll explore the campus, unravel mysteries, and compete for victory.
+        <p class="text-base md:text-lg lg:text-2xl md:text-left mb-8">
+            CodeForge AI Hackathon, organized by VarAInce Club—the AI and Data Science Club at BMSCE—is an adrenaline-pumping, mind-bending 
+            competition where innovation meets intelligence! This hackathon challenges participants to push the limits of their creativity and 
+            technical skills, creating AI-driven solutions to real-world problems.
         </p>
-        <p class="text-base md:text-lg lg:text-2xl text-center md:text-left m-4">
-            Prepare yourself for the most electrifying event VIT has ever seen—Cryptic Hunt 3.0, where the stakes are high, the challenges are fierce, and only the sharpest minds will prevail!
+        <p class="text-base md:text-lg lg:text-2xl md:text-left mb-8">
+            Whether you're crafting cutting-edge machine learning models, building powerful applications, or experimenting with advanced 
+            algorithms, this is the place to showcase your potential.
         </p>
-        <p class="text-base md:text-lg lg:text-2xl text-center md:text-left mb-8">
-            Ready to test your wits and embark on an adventure? Download the app and be a part of the action!
+        <p class="text-base md:text-lg lg:text-2xl md:text-left mb-8">
+            Ready to forge the future with AI? Assemble your team, ignite your passion, and let your ideas take flight in CodeForge AI Hackathon—where innovation meets impact!
         </p>
     </div>
 </div>

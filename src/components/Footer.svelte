@@ -1,5 +1,5 @@
-<footer class="relative py-2 w-full z-50 bg-[url(/bricks.jpg)] flex justify-between">
-    <div class="">
+<footer class="relative py-2 w-full z-50 bg-slate-900/80 flex justify-between">
+    <div class="my-auto">
         <a href="/" >
             <img alt="" width="63" height="63" src="/varaince_ai.png" style="color: transparent;">
         </a>
