@@ -99,9 +99,9 @@
             
             <div class="relative w-1/2 p-4">
                 <div class="absolute top-5 {index % 2 != 0 ? '-left-3' : '-right-3'} h-6 w-6 rounded-full bg-primary-600 border-4 border-white z-10"></div>
-                <button class="p-6 bg-gray-800 rounded-lg shadow-lg cursor-pointer" on:click={() => openModal(event)}>
-                    <h3 class="text-white font-bold md:text-2xl text-lg">{event.title}</h3>
-                    <p class="text-white text-lg">{event.date}</p>
+                <button class="p-2 md:p-6 bg-gray-800 rounded-lg shadow-lg cursor-pointer" on:click={() => openModal(event)}>
+                    <h3 class="text-white font-bold md:text-2xl text-md lg:text-3xl">{event.title}</h3>
+                    <p class="text-white text-md md:text-lg lg:text-2xl">{event.date}</p>
                     <p class="text-gray-300 text-sm">{event.description}</p>
                 </button>
             </div>
