@@ -34,12 +34,12 @@
 
 </script>
 
-<div class="md::min-h-screen flex flex-col justify-center items-center w-full">
-
-    <NavBar />
-    <div class="flex min-h-screen items-center justify-center text-7xl text-white font-extrabold p-10 text-center">
-        Main SVG
+<div class="md:min-h-screen flex flex-col justify-center items-center w-full">
+    <div class="flex flex-col items-center justify-center">
+        <NavBar />
+        <img src="/VARAINCEWEEK.svg" alt="">
     </div>
+    
 	<div bind:this={element} class="max-w-screen relative flex items-center justify-center overflow-hidden p-10" id="section1">
         <div 
             class="-rotate-25 absolute top-0 right-0 -mr-35 w-1/4"
