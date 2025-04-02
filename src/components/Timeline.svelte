@@ -119,7 +119,7 @@
         <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{selectedEvent.date}</p>
         {#if selectedEvent.googleFormsLink !== ""}
         <Button color="green" class="mt-4 w-full"> 
-            <a href={selectedEvent.googleFormsLink} target="_blank">Register Here</a>
+            <a href={selectedEvent.googleFormsLink} target="_blank" class="w-full">Register Here</a>
         </Button>
         {:else}
         <Button color="red" class="mt-4 full disabled">
