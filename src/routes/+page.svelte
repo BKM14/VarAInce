@@ -38,7 +38,7 @@
 <div class="md:min-h-screen flex flex-col justify-center items-center w-full">
     <div class="flex flex-col items-center justify-center">
         <NavBar />
-        <img src="/VARAINCEWEEK.svg" alt="" class="box bounce-1 ">
+        <img src="/VARAINCEWEEK.png" alt="" class="box bounce-1 ">
     </div>
     
 	<div bind:this={element} class="max-w-screen relative flex items-center justify-center overflow-hidden p-10" id="section1">
