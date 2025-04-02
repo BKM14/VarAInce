@@ -1,32 +1,48 @@
 <script lang="ts">
     import CustomAvatar from "./CustomAvatar.svelte";
     import type { Profile } from "./CustomAvatar.svelte";
-    
-    const profiles: Profile[] = [
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg', imageAlt: 'erbology', name: 'Alex Carter', post: 'Software Lead' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg', imageAlt: 'shoes', name: 'Jordan Smith', post: 'Hardware Specialist' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg', imageAlt: 'small bag', name: 'Samantha Lee', post: 'Design Head' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg', imageAlt: 'plants', name: 'Rahul Mehta', post: 'AI Engineer' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg', imageAlt: 'watch', name: 'Elena Garcia', post: 'Embedded Systems Expert' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg', imageAlt: 'shoe', name: 'Daniel Brown', post: 'Cybersecurity Analyst' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg', imageAlt: 'cream', name: 'Priya Sharma', post: 'Machine Learning Lead' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg', imageAlt: 'small bag', name: 'Lucas Johnson', post: 'Full Stack Developer' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg', imageAlt: 'lamp', name: 'Sophia Williams', post: 'Robotics Engineer' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg', imageAlt: 'toiletbag', name: 'Ethan Martinez', post: 'Game Developer' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg', imageAlt: 'playstation', name: 'Olivia Kim', post: 'Cloud Architect' },
-    { image: 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg', imageAlt: 'bag', name: 'Michael Anderson', post: 'Blockchain Specialist' }
+
+    export let galleryTitle: String = "";
+
+    const seniorProfiles: Profile[] = [
+    { image: '/senior-core/Arvindhan_Shekhar.jpeg', imageAlt: 'Arvindhan Shekhar', name: 'Arvindhan Shekhar'},
+    { image: '/senior-core/Raghav_Katyal.jpeg', imageAlt: 'Raghav Katyal', name: 'Raghav Katyal'},
+    { image: '/senior-core/Ibadur_Rahman.jpeg', imageAlt: 'Ibadur Rahman', name: 'Ibadur Rahman'},
+    { image: '/senior-core/Krish_Agarwal.jpeg', imageAlt: 'Krish Agarwal', name: 'Krish Agarwal'},
+    { image: '/senior-core/Insiya_Vakhariya.jpeg', imageAlt: 'Insiya Vakharia', name: 'Insiya Vakharia'},
+    { image: '/senior-core/Kumar_Aditya.jpeg', imageAlt: 'Kumar Aditya', name: 'Kumar Aditya'},
+    { image: '/senior-core/Prajwal_JB.jpeg', imageAlt: 'Prajwal JB', name: 'Prajwal JB'},
+    { image: '/senior-core/Khavya_Reddy.jpeg', imageAlt: 'Khavya Reddy', name: 'Khavya Reddy'},
   ];
 
-  export let galleryTitle: String = "";
+  const juniorProfiles: Profile[] = [
+    { image: '/junior-core/Rishit_Udikeri.jpeg', imageAlt: 'Rishit Udikeri', name: 'Rishit Udikeri'},
+    { image: '/junior-core/Angeline_Lewis.jpeg', imageAlt: 'Angeline Lewis', name: 'Angeline Lewis'},
+    { image: '/junior-core/Devika_B.jpeg', imageAlt: 'Devika B', name: 'Devika B'},
+    { image: '/junior-core/Diya_Rajesh.jpeg', imageAlt: 'Diya Rajesh', name: 'Diya Rajesh'},
+    { image: '/junior-core/Rakshitha_C.jpeg', imageAlt: 'Rakshitha C', name: 'Rakshitha C'},
+    { image: '/junior-core/Rohit_Harish.jpeg', imageAlt: 'Rohit Harish', name: 'Rohit Harish'},
+    { image: '/junior-core/Sai_Prashanth.jpeg', imageAlt: 'Sai Prashanth', name: 'Sai Prashanth'},
+    { image: '/junior-core/Sharanya_Sandur.jpeg', imageAlt: 'Sharanya Sandur', name: 'Sharanya Sandur'},
+    { image: '/junior-core/Tanisha_Shinthray.jpeg', imageAlt: 'Tanisha Shinthray', name: 'Tanisha Shinthray'}
+  ]
+
+  
 </script>
 
 <div class="w-full md:w-3/5 mx-auto p-10">
   <div>
     <h2 class="text-white text-xl font-bold md:text-3xl text-center md:m-10 mb-4">{galleryTitle}</h2>
-    <div class="grid grid-cols-3 lg:grid-cols-4 gap-4">
-      {#each profiles as profile}
+    <div class="grid grid-cols-3 gap-4">
+      {#if galleryTitle === "Senior Core Team"}
+      {#each seniorProfiles as profile}
       <CustomAvatar profile={profile}/>
       {/each}
+      {:else}
+      {#each juniorProfiles as profile}
+      <CustomAvatar profile={profile}/>
+      {/each}
+      {/if}
     </div>
   </div>
 </div>
