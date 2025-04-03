@@ -24,7 +24,8 @@
     { image: '/junior-core/Rohit_Harish.jpeg', imageAlt: 'Rohit Harish', name: 'Rohit Harish'},
     { image: '/junior-core/Sai_Prashanth.jpeg', imageAlt: 'Sai Prashanth', name: 'Sai Prashanth'},
     { image: '/junior-core/Sharanya_Sandur.jpeg', imageAlt: 'Sharanya Sandur', name: 'Sharanya Sandur'},
-    { image: '/junior-core/Tanisha_Shinthray.jpeg', imageAlt: 'Tanisha Shinthray', name: 'Tanisha Shinthray'}
+    { image: '/junior-core/Tanisha_Shinthray.jpeg', imageAlt: 'Tanisha Shinthray', name: 'Tanisha Shinthray'},
+    { image: '/junior-core/Yeshved_Salelkar.jpeg', imageAlt: 'Yeshved Salelkar', name: 'Yeshved Salelkar'}
   ]
 
   
