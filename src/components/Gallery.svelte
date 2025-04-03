@@ -13,6 +13,7 @@
     { image: '/senior-core/Kumar_Aditya.jpeg', imageAlt: 'Kumar Aditya', name: 'Kumar Aditya'},
     { image: '/senior-core/Prajwal_JB.jpeg', imageAlt: 'Prajwal JB', name: 'Prajwal JB'},
     { image: '/senior-core/Khavya_Reddy.jpeg', imageAlt: 'Khavya Reddy', name: 'Khavya Reddy'},
+    { image: '/junior-core/Yeshved_Salelkar.jpeg', imageAlt: 'Yeshved Salelkar', name: 'Yeshved Salelkar'}
   ];
 
   const juniorProfiles: Profile[] = [
@@ -25,7 +26,6 @@
     { image: '/junior-core/Sai_Prashanth.jpeg', imageAlt: 'Sai Prashanth', name: 'Sai Prashanth'},
     { image: '/junior-core/Sharanya_Sandur.jpeg', imageAlt: 'Sharanya Sandur', name: 'Sharanya Sandur'},
     { image: '/junior-core/Tanisha_Shinthray.jpeg', imageAlt: 'Tanisha Shinthray', name: 'Tanisha Shinthray'},
-    { image: '/junior-core/Yeshved_Salelkar.jpeg', imageAlt: 'Yeshved Salelkar', name: 'Yeshved Salelkar'}
   ]
 
   
