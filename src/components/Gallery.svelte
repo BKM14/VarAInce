@@ -10,6 +10,7 @@
     { image: '/senior-core/Ibadur_Rahman.jpeg', imageAlt: 'Ibadur Rahman', name: 'Ibadur Rahman'},
     { image: '/senior-core/Krish_Agarwal.jpeg', imageAlt: 'Krish Agarwal', name: 'Krish Agarwal'},
     { image: '/senior-core/Insiya_Vakhariya.jpeg', imageAlt: 'Insiya Vakharia', name: 'Insiya Vakharia'},
+    { image: '/senior-core/Kanishka_Sharma.jpeg', imageAlt: 'Kanishka Sharma', name: 'Kanishka Sharma'},
     { image: '/senior-core/Kumar_Aditya.jpeg', imageAlt: 'Kumar Aditya', name: 'Kumar Aditya'},
     { image: '/senior-core/Prajwal_JB.jpeg', imageAlt: 'Prajwal JB', name: 'Prajwal JB'},
     { image: '/senior-core/Khavya_Reddy.jpeg', imageAlt: 'Khavya Reddy', name: 'Khavya Reddy'},
@@ -36,8 +37,10 @@
     <h2 class="text-white text-xl font-bold md:text-3xl text-center md:m-10 mb-4">{galleryTitle}</h2>
     <div class="grid grid-cols-3 gap-4">
       {#if galleryTitle === "Senior Core Team"}
-      {#each seniorProfiles as profile}
-      <CustomAvatar profile={profile}/>
+      {#each seniorProfiles as profile, index}
+      <div class={index == seniorProfiles.length - 1 ? "col-start-2" : ""}>
+        <CustomAvatar profile={profile}/>
+      </div>
       {/each}
       {:else}
       {#each juniorProfiles as profile}
