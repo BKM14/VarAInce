@@ -6,6 +6,7 @@
 	import Gallery from '../components/Gallery.svelte';
 	import { onMount } from 'svelte';
 	import Sponsors from '../components/Sponsors.svelte';
+	import { PUBLIC_CLOUDINARY_URL } from '$env/static/public';
     
     let visible = false;
     let element: HTMLElement | null = null;
@@ -38,7 +39,7 @@
 <div class="md:min-h-screen flex flex-col justify-center items-center w-full">
     <div class="flex flex-col items-center justify-center">
         <NavBar />
-        <img src="/VARAINCEWEEK.png" alt="" class="box bounce-1 ">
+        <img src={PUBLIC_CLOUDINARY_URL + "/image/upload/VARAINCEWEEK_o0gptp.png"} alt="" class="box bounce-1 ">
     </div>
     
 	<div bind:this={element} class="max-w-screen relative flex items-center justify-center overflow-hidden p-10" id="section1">
@@ -47,7 +48,7 @@
             class:image-hidden={!visible}
             class:image-visible={visible}
         >
-            <img src="/Rookie.png" alt="Avatar">
+            <img src={PUBLIC_CLOUDINARY_URL + "/image/upload/Rookie_yzheui.png"} alt="Avatar">
         </div>
         <Headline />
     </div>

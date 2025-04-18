@@ -1,4 +1,5 @@
 <script>
+	import { PUBLIC_CLOUDINARY_URL } from '$env/static/public';
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 	const links = [
 		{ href: '#section1', label: 'About Us!' },
@@ -9,7 +10,7 @@
 
 <Navbar class="bg-transparent">
 	<NavBrand href="/">
-		<img src="/varaince_ai.png" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
+		<img src={PUBLIC_CLOUDINARY_URL + "/image/upload/varaince_ai_o8uatp.png"} class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
 		<span class="self-center text-4xl font-semibold whitespace-nowrap text-white">VarAInce</span>
 	</NavBrand>
 	<NavHamburger />

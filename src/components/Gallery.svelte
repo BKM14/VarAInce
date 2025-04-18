@@ -1,32 +1,33 @@
 <script lang="ts">
+	import { PUBLIC_CLOUDINARY_URL } from "$env/static/public";
     import CustomAvatar from "./CustomAvatar.svelte";
     import type { Profile } from "./CustomAvatar.svelte";
 
     export let galleryTitle: String = "";
 
     const seniorProfiles: Profile[] = [
-    { image: '/senior-core/Arvindhan_Shekhar.jpeg', imageAlt: 'Arvindhan Shekhar', name: 'Arvindhan Shekhar'},
-    { image: '/senior-core/Raghav_Katyal.jpeg', imageAlt: 'Raghav Katyal', name: 'Raghav Katyal'},
-    { image: '/senior-core/Ibadur_Rahman.jpeg', imageAlt: 'Ibadur Rahman', name: 'Ibadur Rahman'},
-    { image: '/senior-core/Krish_Agarwal.jpeg', imageAlt: 'Krish Agarwal', name: 'Krish Agarwal'},
-    { image: '/senior-core/Insiya_Vakhariya.jpeg', imageAlt: 'Insiya Vakharia', name: 'Insiya Vakharia'},
-    { image: '/senior-core/Kanishka_Sharma.jpeg', imageAlt: 'Kanishka Sharma', name: 'Kanishka Sharma'},
-    { image: '/senior-core/Kumar_Aditya.jpeg', imageAlt: 'Kumar Aditya', name: 'Kumar Aditya'},
-    { image: '/senior-core/Prajwal_JB.jpeg', imageAlt: 'Prajwal JB', name: 'Prajwal JB'},
-    { image: '/senior-core/Khavya_Reddy.jpeg', imageAlt: 'Khavya Reddy', name: 'Khavya Reddy'},
-    { image: '/junior-core/Yeshved_Salelkar.jpeg', imageAlt: 'Yeshved Salelkar', name: 'Yeshved Salelkar'}
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Arvindhan_Shekhar_klqi1d.jpg", imageAlt: 'Arvindhan Shekhar', name: 'Arvindhan Shekhar'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Raghav_Katyal_lyhfo5.jpg", imageAlt: 'Raghav Katyal', name: 'Raghav Katyal'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Ibadur_Rahman_swyn4p.jpg", imageAlt: 'Ibadur Rahman', name: 'Ibadur Rahman'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Krish_Agarwal_uwbu7c.jpg", imageAlt: 'Krish Agarwal', name: 'Krish Agarwal'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Insiya_Vakhariya_s6jr4g.jpg", imageAlt: 'Insiya Vakharia', name: 'Insiya Vakharia'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Kanishka_Sharma_oyolma.jpg", imageAlt: 'Kanishka Sharma', name: 'Kanishka Sharma'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Kumar_Aditya_zomxk9.jpg", imageAlt: 'Kumar Aditya', name: 'Kumar Aditya'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Prajwal_JB_htvkfs.jpg", imageAlt: 'Prajwal JB', name: 'Prajwal JB'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Khavya_Reddy_dy98am.jpg", imageAlt: 'Khavya Reddy', name: 'Khavya Reddy'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Yeshved_Salelkar_lozsrw.png", imageAlt: 'Yeshved Salelkar', name: 'Yeshved Salelkar'}
   ];
 
   const juniorProfiles: Profile[] = [
-    { image: '/junior-core/Rishit_Udikeri.jpeg', imageAlt: 'Rishit Udikeri', name: 'Rishit Udikeri'},
-    { image: '/junior-core/Angeline_Lewis.jpeg', imageAlt: 'Angeline Lewis', name: 'Angeline Lewis'},
-    { image: '/junior-core/Devika_B.jpeg', imageAlt: 'Devika B', name: 'Devika B'},
-    { image: '/junior-core/Diya_Rajesh.jpeg', imageAlt: 'Diya Rajesh', name: 'Diya Rajesh'},
-    { image: '/junior-core/Rakshitha_C.jpeg', imageAlt: 'Rakshitha C', name: 'Rakshitha C'},
-    { image: '/junior-core/Rohit_Harish.jpeg', imageAlt: 'Rohit Harish', name: 'Rohit Harish'},
-    { image: '/junior-core/Sai_Prashanth.jpeg', imageAlt: 'Sai Prashanth', name: 'Sai Prashanth'},
-    { image: '/junior-core/Sharanya_Sandur.jpeg', imageAlt: 'Sharanya Sandur', name: 'Sharanya Sandur'},
-    { image: '/junior-core/Tanisha_Shinthray.jpeg', imageAlt: 'Tanisha Shinthray', name: 'Tanisha Shinthray'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Rishit_Udikeri_zusmv8.jpg", imageAlt: 'Rishit Udikeri', name: 'Rishit Udikeri'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Angeline_Lewis_yggmcc.jpg", imageAlt: 'Angeline Lewis', name: 'Angeline Lewis'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Devika_B_pnmtxe.jpg", imageAlt: 'Devika B', name: 'Devika B'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Diya_Rajesh_gavk1t.jpg", imageAlt: 'Diya Rajesh', name: 'Diya Rajesh'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Rakshitha_C_rvkdiu.jpg", imageAlt: 'Rakshitha C', name: 'Rakshitha C'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Rohit_Harish_yjbg1o.jpg", imageAlt: 'Rohit Harish', name: 'Rohit Harish'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Sai_Prashanth_p31inh.jpg", imageAlt: 'Sai Prashanth', name: 'Sai Prashanth'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Sharanya_Sandur_b6adtg.jpg", imageAlt: 'Sharanya Sandur', name: 'Sharanya Sandur'},
+    { image: PUBLIC_CLOUDINARY_URL + "/image/upload/Tanisha_Shinthray_w2mzkx.jpg", imageAlt: 'Tanisha Shinthray', name: 'Tanisha Shinthray'},
   ]
 
   
