@@ -1,18 +1,42 @@
-<script lang="ts">
-	import { Avatar } from "flowbite-svelte";
-    
-    export let profile: Profile;
-</script>
-
 <script context="module" lang="ts">
-    export interface Profile {
-        image: string;
-        imageAlt: string;
-        name: string;
-    }
+	export interface Profile {
+		image: string;
+		imageAlt: string;
+		name: string;
+	}
 </script>
 
-<div class="text-center">
-    <Avatar src={profile.image} alt={profile.imageAlt} class="w-23 h-22 lg:w-38 lg:h-36 mx-auto"/>
-    <div class="text-white font-bold">{profile.name}</div>
+<script lang="ts">
+	import { Avatar } from 'flowbite-svelte';
+	import { onMount } from 'svelte';
+	export let profile: Profile;
+
+	let visible = false;
+	let el: HTMLElement;
+
+	const lazyLoad = (target: Element) => {
+		const io = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					visible = true;
+					observer.disconnect();
+				}
+			});
+		});
+
+		io.observe(el);
+	};
+
+	onMount(() => {
+		lazyLoad(el);
+	});
+</script>
+
+<div class="text-center" bind:this={el}>
+	<Avatar
+		src={visible ? profile.image : undefined}
+		alt={profile.imageAlt}
+		class="mx-auto h-22 w-23 lg:h-36 lg:w-38"
+	/>
+	<div class="font-bold text-white">{profile.name}</div>
 </div>
